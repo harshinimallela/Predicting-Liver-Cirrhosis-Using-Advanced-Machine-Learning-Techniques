@@ -6,11 +6,12 @@ After installing, check that Git works by opening your terminal (or Git Bash on 
 
 git --version
 
-Configure Git
+### Configure Git
 
 git config --global user.name "Your Name"
+
 git config --global user.email "you@example.com"
 
-clone(copy) the project to your local system be using below command:
+#### clone(copy) the project to your local system be using below command:
 
 git clone https://github.com/TEswarreddy/Predicting-Liver-Cirrhosis-Using-Advanced-Machine-Learning-Techniques.git
