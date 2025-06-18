@@ -1,7 +1,7 @@
 # Setting Up the Project
 
 
-## get the project in your local system
+## get the project on your local system
 download Git from https://git-scm.com/downloads/win
 
 After installing, check that Git works by opening your terminal (or Git Bash on Windows) and running:
@@ -14,7 +14,7 @@ Configure Git
 
           git config --global user.email "you@example.com"
 
-clone (copy) the project to your local system using below command:
+clone (copy) the project to your local system using the below command:
 
           git clone https://github.com/TEswarreddy/Predicting-Liver-Cirrhosis-Using-Advanced-Machine-Learning-Techniques.git
 
