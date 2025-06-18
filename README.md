@@ -34,17 +34,12 @@ If you want to again re-train the model,then choose bolow one for trian the mode
 
 1) use Jupyter Notebook provided by Anaconda Navigator
 
-   to install Anacode Navigatot Download the Anacond by
+   to install Anacode Navigatot Download the Anacond by https://www.anaconda.com/download
 
-                       https://www.anaconda.com/download
-
-2)use Google colabs , because Colab is used extensively in the machine learning community with applications.
-
-                       https://colab.research.google.com/
+2)use Google colabs , because Colab is used extensively in the machine learning community with applications. https://colab.research.google.com/
 3)use VsCode for IDE and model training 
 
-  first install VsCode by
-                      https://code.visualstudio.com/download
+  first install VsCode by  https://code.visualstudio.com/download
 
   and then install extenstion in Vscode, the extensions are Jupyter,python
 
