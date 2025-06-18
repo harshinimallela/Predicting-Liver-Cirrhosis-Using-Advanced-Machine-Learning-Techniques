@@ -1,2 +1,2 @@
-# Get the code in your local system
+# How to run these project
 git clone https://github.com/TEswarreddy/Predicting-Liver-Cirrhosis-Using-Advanced-Machine-Learning-Techniques.git
