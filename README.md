@@ -44,7 +44,9 @@ https://colab.research.google.com/
   first install VsCode by  https://code.visualstudio.com/download
 
   and then install the following extenstions in Vscode, 
+  
   ->Jupyter
+  
   ->python
 
 ### Run the  Project
