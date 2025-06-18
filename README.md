@@ -37,6 +37,7 @@ If you want to again re-train the model,then choose bolow one for trian the mode
    to install Anacode Navigatot Download the Anacond by https://www.anaconda.com/download
 
 2)use Google colabs , because Colab is used extensively in the machine learning community with applications. https://colab.research.google.com/
+
 3)use VsCode for IDE and model training 
 
   first install VsCode by  https://code.visualstudio.com/download
