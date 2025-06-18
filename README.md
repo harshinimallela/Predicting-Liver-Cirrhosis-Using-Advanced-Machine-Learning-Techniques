@@ -28,4 +28,5 @@ If you want to again re-train the model,then
 1) use Jupyter Notebook provided by Anaconda Navigator
 
    to install Anacode Navigatot Download the Anacond by
+
                        https://www.anaconda.com/download
