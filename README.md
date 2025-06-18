@@ -20,3 +20,12 @@ clone(copy) the project to your local system be using below command:
 ## Download the dataset from koggle
 
           https://www.kaggle.com/datasets/bhavanipriya222/liver-cirrhosis-prediction
+
+## Run the Project
+
+If you want to again re-train the model,then
+
+1) use Jupyter Notebook provided by Anaconda Navigator
+
+   to install Anacode Navigatot Download the Anacond by
+                       https://www.anaconda.com/download
