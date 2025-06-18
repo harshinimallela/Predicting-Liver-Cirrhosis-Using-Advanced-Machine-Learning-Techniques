@@ -61,10 +61,10 @@ This will create a venv/ folder containing the virtual environment.
 
 #### 2️⃣ Activate the Virtual Environment
 
-          On Windows:
-                    venv\Scripts\activate
-          On macOS/Linux:
-                    source venv/bin/activate
+On Windows:
+          venv\Scripts\activate
+On macOS/Linux:
+          source venv/bin/activate
                     
 You should see the environment name (e.g., (venv)) in your terminal prompt, indicating that it's activated.
 
