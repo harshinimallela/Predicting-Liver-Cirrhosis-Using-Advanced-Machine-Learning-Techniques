@@ -2,7 +2,7 @@
 
 
 ## get the project in your local system
-downlod Git from https://git-scm.com/downloads/win
+download Git from https://git-scm.com/downloads/win
 
 After installing, check that Git works by opening your terminal (or Git Bash on Windows) and running:
 
@@ -14,13 +14,13 @@ Configure Git
 
           git config --global user.email "you@example.com"
 
-clone(copy) the project to your local system be using below command:
+clone (copy) the project to your local system using below command:
 
           git clone https://github.com/TEswarreddy/Predicting-Liver-Cirrhosis-Using-Advanced-Machine-Learning-Techniques.git
 
 
 
-## Download the dataset from koggle
+## Download the dataset from kaggle
 
           https://www.kaggle.com/datasets/bhavanipriya222/liver-cirrhosis-prediction
 
@@ -29,22 +29,25 @@ clone(copy) the project to your local system be using below command:
 
 
 ### Train the Model
-If you want to again re-train the model,then choose bolow one for trian the model according to your convenience
+If you want to again re-train the model,then choose below options for train the model according to your convenience
 
 
 1) use Jupyter Notebook provided by Anaconda Navigator
 
-   to install Anacode Navigatot Download the Anacond by https://www.anaconda.com/download
+   to install Anacoda Navigator Download the Anaconda by https://www.anaconda.com/download
 
-2)use Google colabs , because Colab is used extensively in the machine learning community with applications. https://colab.research.google.com/
+2)use Google colabs , because Colab is used extensively in the machine learning community with applications. 
+https://colab.research.google.com/
 
 3)use VsCode for IDE and model training 
 
   first install VsCode by  https://code.visualstudio.com/download
 
-  and then install extenstion in Vscode, the extensions are Jupyter,python
+  and then install the following extenstions in Vscode, 
+  ->Jupyter
+  ->python
 
-### Run the Entire Project
+### Run the  Project
 
 Follow the steps below to set up and run this Flask + Machine Learning project locally:
 
