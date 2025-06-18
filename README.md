@@ -15,3 +15,8 @@ Configure Git
 clone(copy) the project to your local system be using below command:
 
           git clone https://github.com/TEswarreddy/Predicting-Liver-Cirrhosis-Using-Advanced-Machine-Learning-Techniques.git
+
+
+## Download the dataset from koggle
+
+          https://www.kaggle.com/datasets/bhavanipriya222/liver-cirrhosis-prediction
