@@ -14,7 +14,7 @@ def hello_world():
         pred = "No Liver Disease Detected"
     return pred
 
-@app.route("/predict")
+@app.route("/api/predict",methods=['GET', 'POST'])
 def predict():
     return "Prediction endpoint is not implemented yet."
 if __name__ == "__main__":
