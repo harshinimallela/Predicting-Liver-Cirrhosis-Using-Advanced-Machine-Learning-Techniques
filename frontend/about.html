@@ -1,0 +1,322 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>About - Liver Cirrhosis Prediction</title>
+    <style>
+        :root {
+        --primary-color: #3e8ed0;
+        --background-color: #f4f9f5;
+        --text-color: #333;
+        --white: #fff;
+        }
+
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+
+        body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        }
+
+        /* header */
+        /* Desktop view */
+        .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #3ed07b;
+        color: white;
+        flex-wrap: wrap;
+        }
+        .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: white;
+        cursor: pointer;
+        }
+
+        .logo {
+        font-size: 1.7rem;
+        font-weight: bold;
+        }
+
+        .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 1.5rem;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+        color: #cce5ff;
+        }
+
+        /* Mobile view */
+        @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav-links {
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+
+        .nav-links a {
+            margin: 0.75rem 0;
+            padding: 0.5rem 1rem;
+            background-color: #0e2418;
+            border-radius: 5px;
+        }
+
+        .nav-links.show {
+            display: flex;
+        }
+        }
+
+
+
+        header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        }
+
+        header p {
+        font-size: 1.1rem;
+        }
+
+        .container {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        }
+
+        p {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        }
+
+        /* Team Section */
+        .team {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+        }
+
+        .member {
+        background: #f0f4fa;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .member h3 {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+        color: #222;
+        }
+
+        .member p {
+        font-size: 0.95rem;
+        color: #555;
+        }
+
+        footer {
+        background-color: #e3eaf2;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        margin-top: 2rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        .container {
+            padding: 1.5rem 1rem;
+            margin: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 0.95rem;
+        }
+        }
+
+        @media (max-width: 480px) {
+        header h1 {
+            font-size: 1.2rem;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+        }
+        .links {
+        margin-top: 0.5rem;
+        }
+
+        .links a {
+        text-decoration: none;
+        color: #3e8ed0;
+        font-weight: 500;
+        margin: 0 0.3rem;
+        transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+        color: #1f5f99;
+        }
+        .image-section {
+        margin: 1.5rem 0;
+        text-align: center;
+        }
+
+        .image-section img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-section .caption {
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 0.5rem;
+        font-style: italic;
+        }
+
+
+    </style>
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('show');
+        }
+    </script>
+    </head>
+    <body>
+
+    <!-- <header>
+        <h1>Revolutionizing Liver Care</h1>
+        <p>Predicting Liver Cirrhosis Using Advanced Machine Learning Techniques</p>
+    </header> -->
+    <header class="site-header">
+        <div class="logo">Predicting Liver Cirrhosis</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="nav-links" id="navLinks">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/Prediction.html">Services</a>
+        <a href="/index.html#contact">Contact</a>
+        </nav>
+    </header> 
+
+    <main class="container">
+        <h2>About the Project</h2>
+        <p>
+        <strong>Revolutionizing Liver Care</strong> is a forward-thinking healthcare project aimed at improving the early detection and treatment of liver cirrhosis using cutting-edge machine learning technologies.
+        </p>
+        <!-- Cirrhosis Image Section -->
+        <div class="image-section">
+            <img src="cirrhosis.webp" alt="Healthy vs Cirrhosis Liver" />
+            <p class="caption">Visual comparison between a healthy liver and one affected by cirrhosis. Source: Healthline</p>
+        </div>
+        <p>
+        Cirrhosis is a progressive liver condition often diagnosed at later stages. By analyzing clinical, lifestyle, and demographic data, our models—such as <em>Random Forest</em>, <em>Naïve Bayes</em>, <em>XGBoost</em>, <em>Logistic Regression</em>, and <em>Support Vector Machines</em>—deliver accurate predictions to assist doctors in timely intervention.
+        </p>
+        <p>
+        The project empowers healthcare professionals with intelligent, data-driven tools to support better clinical decisions, reduce diagnostic delays, and improve patient outcomes. It represents a significant step toward predictive and personalized medicine.
+        </p>
+
+        
+
+    </main>
+    <main class="container">
+        <h2>Team Members</h2>
+        <div class="team">
+            <div class="member">
+                <h3>Thathireddy Eswar Reddy</h3>
+                <p>Project Lead & ML Engineer</p>
+                <div class="links">
+                <a href="" target="_blank">LinkedIn</a> |
+                <a href="" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="member">
+                <h3>Dasari Gowthami</h3>
+                <p>Data Scientist</p>
+                <div class="links">
+                <a href="" target="_blank">LinkedIn</a> |
+                <a href="" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="member">
+                <h3>Golla Navitha</h3>
+                <p>Frontend Developer</p>
+                <div class="links">
+                <a href="" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="member">
+                <h3>Baripireddy Sai Chandan Reddy</h3>
+                <p>Backend Developer</p>
+                <div class="links">
+                <a href="" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="member">
+                <h3>D Harsha Vardhan</h3>
+                <p>Medical Consultant</p>
+                <div class="links">
+                <a href="" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+
+    <footer>
+        &copy; 2025 Revolutionizing Liver Care | All rights reserved
+    </footer>
+
+    </body>
+    </html>

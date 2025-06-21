@@ -1,270 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liver Cirrhosis Prediction System</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Predicting Liver Cirrhosis</title>
+  <link rel="stylesheet" href="homeStyles.css" />
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('show');
+  }
+</script>
+
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header-content">
-                <!-- <div class="logo">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5Z"/>
-                    </svg>
-                </div> -->
-                <div>
-                    <h1>Liver Cirrhosis Prediction System</h1>
-                    <p>Advanced Machine Learning for Liver Care</p>
-                </div>
-            </div>
-        </header>
 
-        <main class="main-content">
-            <form id="predictionForm" class="prediction-form">
-                <!-- Demographics Section -->
-                <section class="form-section">
-                    <div class="section-header">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                            <circle cx="12" cy="7" r="4"/>
-                        </svg>
-                        <h2>Demographics</h2>
-                    </div>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="age">Age <span class="required">*</span></label>
-                            <input type="number" id="age" name="age" required min="1" max="120" placeholder="Enter age">
-                        </div>
-                        <div class="form-group">
-                            <label for="gender">Gender <span class="required">*</span></label>
-                            <select id="gender" name="gender" required>
-                                <option value="">Select Gender</option>
-                                <option value="0">Female</option>
-                                <option value="1">Male</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="place">Location <span class="required">*</span></label>
-                            <select id="place" name="place" required>
-                                <option value="">Select Location</option>
-                                <option value="0">Urban</option>
-                                <option value="1">Rural</option>
-                            </select>
-                        </div>
-                    </div>
-                </section>
+  <header class="site-header">
+    <div class="logo">Predicting Liver Cirrhosis</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/Prediction.html">Services</a>
+      <a href="/index.html#contact">Contact</a>
+    </nav>
+  </header>
 
-                <!-- Lifestyle Section -->
-                <section class="form-section">
-                    <div class="section-header">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2v20m8-10H4"/>
-                        </svg>
-                        <h2>Lifestyle & Medical History</h2>
-                    </div>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="alcoholDuration">Duration of Alcohol Consumption <span class="unit">(years)</span></label>
-                            <input type="number" id="alcoholDuration" name="alcoholDuration" min="0" max="80" step="0.1" placeholder="0">
-                        </div>
-                        <div class="form-group">
-                            <label for="alcoholQuantity">Quantity of Alcohol <span class="unit">(quarters/day)</span></label>
-                            <input type="number" id="alcoholQuantity" name="alcoholQuantity" min="0" max="20" step="0.1" placeholder="0">
-                        </div>
-                        <div class="form-group">
-                            <label for="alcoholType">Type of Alcohol</label>
-                            <select id="alcoholType" name="alcoholType">
-                                <option value="0">None</option>
-                                <option value="1">Beer</option>
-                                <option value="2">Wine</option>
-                                <option value="3">Spirits</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="diabetes">Diabetes Result</label>
-                            <select id="diabetes" name="diabetes">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="bloodPressure">Blood Pressure <span class="unit">(mmHg)</span></label>
-                            <input type="number" id="bloodPressure" name="bloodPressure" min="50" max="300" placeholder="120">
-                        </div>
-                        <div class="form-group">
-                            <label for="obesity">Obesity</label>
-                            <select id="obesity" name="obesity">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="familyHistory">Family History of Cirrhosis</label>
-                            <select id="familyHistory" name="familyHistory">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
-                        </div>
-                    </div>
-                </section>
+  <section class="introduction">
+        <div class="intro-container">
+            <h1>Revolutionizing Liver Care</h1>
+            
+            <p >
+                Liver cirrhosis is a chronic and progressive liver disease marked by irreversible scarring of liver tissue. 
+                If untreated, it can lead to severe complications and liver failure. T
+                his project aims to develop a machine learning predictive model for early detection and prognosis of liver cirrhosis.
+            </p>
+            <a  href="/about.html">About Us</a>
+        </div>
+    </section>
 
-                <!-- Blood Parameters Section -->
-                <section class="form-section">
-                    <div class="section-header">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2a3 3 0 0 0-3 3c0 .31.06.61.17.88L12 17l2.83-11.12c.11-.27.17-.57.17-.88a3 3 0 0 0-3-3z"/>
-                            <path d="M12 2a3 3 0 0 1 3 3c0 .31-.06.61-.17.88L12 17 9.17 5.88A3.001 3.001 0 0 1 12 2z"/>
-                        </svg>
-                        <h2>Blood Parameters</h2>
-                    </div>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="hemoglobin">Hemoglobin <span class="unit">(g/dl)</span></label>
-                            <input type="number" id="hemoglobin" name="hemoglobin" min="5" max="20" step="0.1" placeholder="13.5">
-                        </div>
-                        <div class="form-group">
-                            <label for="pcv">PCV <span class="unit">(%)</span></label>
-                            <input type="number" id="pcv" name="pcv" min="15" max="60" step="0.1" placeholder="40">
-                        </div>
-                        <div class="form-group">
-                            <label for="rbc">RBC <span class="unit">(million cells/µL)</span></label>
-                            <input type="number" id="rbc" name="rbc" min="2" max="7" step="0.01" placeholder="4.5">
-                        </div>
-                        <div class="form-group">
-                            <label for="mcv">MCV <span class="unit">(fL/cell)</span></label>
-                            <input type="number" id="mcv" name="mcv" min="60" max="120" step="0.1" placeholder="85">
-                        </div>
-                        <div class="form-group">
-                            <label for="mch">MCH <span class="unit">(pg/cell)</span></label>
-                            <input type="number" id="mch" name="mch" min="20" max="40" step="0.1" placeholder="30">
-                        </div>
-                        <div class="form-group">
-                            <label for="mchc">MCHC <span class="unit">(g/dl)</span></label>
-                            <input type="number" id="mchc" name="mchc" min="28" max="38" step="0.1" placeholder="33">
-                        </div>
-                        <div class="form-group">
-                            <label for="totalCount">Total Count</label>
-                            <input type="number" id="totalCount" name="totalCount" min="3000" max="15000" placeholder="7000">
-                        </div>
-                        <div class="form-group">
-                            <label for="polymorphs">Polymorphs <span class="unit">(%)</span></label>
-                            <input type="number" id="polymorphs" name="polymorphs" min="40" max="80" step="0.1" placeholder="60">
-                        </div>
-                        <div class="form-group">
-                            <label for="lymphocytes">Lymphocytes <span class="unit">(%)</span></label>
-                            <input type="number" id="lymphocytes" name="lymphocytes" min="15" max="45" step="0.1" placeholder="30">
-                        </div>
-                        <div class="form-group">
-                            <label for="monocytes">Monocytes <span class="unit">(%)</span></label>
-                            <input type="number" id="monocytes" name="monocytes" min="2" max="10" step="0.1" placeholder="5">
-                        </div>
-                        <div class="form-group">
-                            <label for="eosinophils">Eosinophils <span class="unit">(%)</span></label>
-                            <input type="number" id="eosinophils" name="eosinophils" min="1" max="6" step="0.1" placeholder="3">
-                        </div>
-                        <div class="form-group">
-                            <label for="basophils">Basophils <span class="unit">(%)</span></label>
-                            <input type="number" id="basophils" name="basophils" min="0" max="2" step="0.1" placeholder="1">
-                        </div>
-                        <div class="form-group">
-                            <label for="plateletCount">Platelet Count <span class="unit">(lakhs/mm³)</span></label>
-                            <input type="number" id="plateletCount" name="plateletCount" min="1" max="5" step="0.01" placeholder="2.5">
-                        </div>
-                    </div>
-                </section>
+    <!-- Services section-->
+    <section class="service" id="services">
+        <div class="services-container">
+            <h2 class="services-heading">Liver Cirrhosis Prediction</h2>
+            <p class="lead services-lead"> Revolutionizing liver disease management through intelligent machine learning 
+                models that analyze clinical, demographic, and lifestyle data to Predicting the Liver Cirrhosis.
+            </p>
+            <br>
+            <a href="/Prediction">
+                Prediction
+            </a>
+        </div>
+    </section>
 
-                <!-- Liver Function Tests Section -->
-                <section class="form-section">
-                    <div class="section-header">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 9V5a3 3 0 0 0-6 0v4"/>
-                            <rect x="2" y="9" width="20" height="12" rx="2"/>
-                        </svg>
-                        <h2>Liver Function Tests</h2>
-                    </div>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="direct">Direct Bilirubin <span class="unit">(mg/dl)</span></label>
-                            <input type="number" id="direct" name="direct" min="0" max="5" step="0.1" placeholder="0.3">
-                        </div>
-                        <div class="form-group">
-                            <label for="indirect">Indirect Bilirubin <span class="unit">(mg/dl)</span></label>
-                            <input type="number" id="indirect" name="indirect" min="0" max="5" step="0.1" placeholder="0.7">
-                        </div>
-                        <div class="form-group">
-                            <label for="totalProtein">Total Protein <span class="unit">(g/dl)</span></label>
-                            <input type="number" id="totalProtein" name="totalProtein" min="5" max="10" step="0.1" placeholder="7.2">
-                        </div>
-                        <div class="form-group">
-                            <label for="albumin">Albumin <span class="unit">(g/dl)</span></label>
-                            <input type="number" id="albumin" name="albumin" min="2" max="6" step="0.1" placeholder="4.2">
-                        </div>
-                        <div class="form-group">
-                            <label for="globulin">Globulin <span class="unit">(g/dl)</span></label>
-                            <input type="number" id="globulin" name="globulin" min="1" max="5" step="0.1" placeholder="3.0">
-                        </div>
-                        <div class="form-group">
-                            <label for="phosphatase">AL.Phosphatase <span class="unit">(U/L)</span></label>
-                            <input type="number" id="phosphatase" name="phosphatase" min="30" max="300" placeholder="85">
-                        </div>
-                        <div class="form-group">
-                            <label for="sgot">SGOT/AST <span class="unit">(U/L)</span></label>
-                            <input type="number" id="sgot" name="sgot" min="10" max="200" placeholder="35">
-                        </div>
-                    </div>
-                </section>
+  
+  <section class="contact" id="contact">
+      <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form class="contact-form"id="contact">
+        <label for="name" >Name</label>
+        <input type="text" id="name" name="name" required />
 
-                <!-- Imaging Section -->
-                <section class="form-section">
-                    <div class="section-header">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                            <line x1="8" y1="21" x2="16" y2="21"/>
-                            <line x1="12" y1="17" x2="12" y2="21"/>
-                        </svg>
-                        <h2>Imaging Results</h2>
-                    </div>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="usgAbdomen">USG Abdomen (Diffuse Liver)</label>
-                            <select id="usgAbdomen" name="usgAbdomen">
-                                <option value="0">Normal</option>
-                                <option value="1">Diffuse Liver Disease</option>
-                            </select>
-                        </div>
-                    </div>
-                </section>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"  required />
 
-                <div class="form-actions">
-                    <button type="button" id="resetBtn" class="btn btn-secondary">Reset Form</button>
-                    <button type="submit" id="predictBtn" class="btn btn-primary">
-                        <span class="btn-text">Predict</span>
-                        <div class="loading-spinner" style="display: none;"></div>
-                    </button>
-                </div>
-            </form>
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required />
 
-            <!-- Results Section -->
-            <div id="resultsSection" class="results-section" style="display: none;">
-                <div class="result-card">
-                    <div class="result-header">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="20,6 9,17 4,12"/>
-                        </svg>
-                        <h3>Prediction Results</h3>
-                    </div>
-                    <div id="predictionResult" class="prediction-result">
-                        <!-- Results will be populated here -->
-                    </div>
-                </div>
-            </div>
-        </main>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+        </form>
     </div>
-
-    <script src="script.js"></script>
+</section>
+  
+    <footer>
+        &copy; 2025 Revolutionizing Liver Care | All rights reserved
+    </footer>
 </body>
 </html>
