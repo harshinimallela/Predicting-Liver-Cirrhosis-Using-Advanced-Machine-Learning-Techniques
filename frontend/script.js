@@ -238,3 +238,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+//contact
+
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.querySelector('.contact-form');
+
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent page reload
+
+    // Collect form data
+    const formData = {
+      name: document.getElementById('name').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      subject: document.getElementById('subject').value.trim(),
+      message: document.getElementById('message').value.trim()
+    };
+
+    try {
+      const response = await fetch('http://localhost:8000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        contactForm.reset();
+      } else {
+        alert('Failed to send message: ' + (result.message || 'Unknown error'));
+      }
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+      alert('An error occurred while sending the message.');
+    }
+  });
+});
