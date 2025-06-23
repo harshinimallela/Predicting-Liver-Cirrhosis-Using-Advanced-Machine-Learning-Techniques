@@ -45,7 +45,7 @@ def contact():
         user_email = data.get('email')
         subject = data.get('subject')
         message = data.get('message')
-        print(user_name, user_email, subject, message)
+        print(f"name: {user_name} \n email: { user_email} \n subject: { subject} \n message: {message}")
         # Compose email to admin (yourself)
         email_message = EmailMessage()
         email_message['Subject'] = f"Liver Cirrhosis Contact {subject}"

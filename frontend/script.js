@@ -256,6 +256,8 @@ document.addEventListener('DOMContentLoaded', () => {
       message: document.getElementById('message').value.trim()
     };
 
+    console.log('Form Data:', formData);
+
     try {
       const response = await fetch('https://predicting-liver-cirrhosis-using.onrender.com/api/contact', {
         method: 'POST',
