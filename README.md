@@ -85,7 +85,7 @@ After setting up the environment, start the Flask server:
 
           python app.py
           
-Then open your browser and visit: http://localhost:5000
+Then open your browser and visit: http://127.0.0.1:8000
 
 
 
