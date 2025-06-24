@@ -97,7 +97,7 @@ footer {
 /* Intoduction */
 
 .introduction{
-  background: url(background.png);
+  background: url(./../../template/assets/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 70vh;
@@ -139,7 +139,7 @@ footer {
 /* Mobile view */
 @media (max-width: 768px) {
   .introduction{
-    background: url(mobile_background.png);        
+    background: url(../../template/assets/mobile_background.png);        
     background-repeat: no-repeat;
     background-position: center ;  /* Adjust as needed */
     background-color:#397e8fd3;  /* Fallback background */

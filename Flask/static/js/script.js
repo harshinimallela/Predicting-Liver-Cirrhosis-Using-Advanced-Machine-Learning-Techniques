@@ -135,7 +135,7 @@ async function handleFormSubmit(event) {
     try {
         const formData = collectFormData();
         console.log(formData)
-        const response = await fetch('https://predicting-liver-cirrhosis-using.onrender.com/api/predict', {
+        const response = await fetch('http://127.0.0.1:8000/api/predict', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Form Data:', formData);
 
     try {
-      const response = await fetch('https://predicting-liver-cirrhosis-using.onrender.com/api/contact', {
+      const response = await fetch('http://127.0.0.1:8000/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
